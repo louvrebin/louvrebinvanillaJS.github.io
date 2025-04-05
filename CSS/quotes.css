@@ -1,0 +1,16 @@
+/* css/quotes.css */
+
+#quote-box {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+#quote-text {
+  margin-bottom: 10px;
+}
+
+#quote-author {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

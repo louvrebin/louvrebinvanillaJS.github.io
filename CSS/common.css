@@ -1,0 +1,41 @@
+/* css/common.css */
+
+/* 기본 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  overflow: hidden;
+  background-color: #000; /* fallback for JS background */
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* 다크모드 공통 처리 */
+.dark-mode {
+  background-color: #111 !important;
+  color: #eee;
+}
+
+.dark-mode .info-box {
+  background: rgba(255, 255, 255, 0.1);
+  color: #eee;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+}
