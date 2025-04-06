@@ -1,6 +1,5 @@
-//const now = new Date();
-//const hour = now.getHours();
-const hour = 20;
+const now = new Date();
+const hour = now.getHours();
 let imageName = "";
 let timeGreeting = "";
 let isNight = false;
@@ -23,11 +22,6 @@ document.body.style.backgroundImage = `url("img/${imageName}")`;
 document.body.style.backgroundSize = "cover";
 document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundPosition = "center center";
-
-// 인사말 출력
-const greetingTarget = document.querySelector("#greeting");
-greetingTarget.innerText = timeGreeting;
-greetingTarget.classList.remove("hidden");
 
 // 밤이면 다크모드 적용
 if (isNight) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/greetings.css" />
     <link rel="stylesheet" href="css/clock.css" />
     <link rel="stylesheet" href="css/quotes.css" />
     <link rel="stylesheet" href="css/background.css" />
@@ -23,12 +23,6 @@
       <input type="submit" value="Log In" />
     </form>
 
-    <!-- 인사 박스 -->
-    <div id="greeting-box" class="hidden">
-      <strong id="greeting-name"></strong>
-      <span id="greeting-message"></span>
-    </div>
-
     <!-- 나머지 기능들 -->
     <div id="quote">
       <span></span>
@@ -38,6 +32,10 @@
       <span></span>
       <span></span>
     </div>
+    <div id="layout-container" class="hidden">
+      <div class="info-box" id="clock-box">...</div>
+      <div id="greeting-box" class="hidden">...</div>
+    </div>
     <div class="info-box">
       <h2 id="info-clock">00:00:00</h2>
       <p id="info-date">2025.03.28 (금)</p>
@@ -46,7 +44,12 @@
         <footer id="quote-author">– 작가</footer>
       </blockquote>
     </div>
-    <div class="todo-box">
+    <!-- 인사 박스 -->
+    <div id="greeting-box" class="hidden">
+      <strong id="greeting-name"></strong>
+      <span id="greeting-message"></span>
+    </div>
+      <div class="todo-box">
       <form id="todo-form">
         <input type="text" id="todo-input" placeholder="할 일을 입력하세요" required />
       </form>
@@ -58,7 +61,6 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
     <script src="js/greetings.js"></script>
   </body>
 </html>
