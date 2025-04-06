@@ -4,43 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/common.css" />
-  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/greetings.css" />
   <link rel="stylesheet" href="css/clock.css" />
   <link rel="stylesheet" href="css/quotes.css" />
   <link rel="stylesheet" href="css/background.css" />
   <link rel="stylesheet" href="css/todo.css" />
+  <link rel="stylesheet" href="css/weather.css" />
   <title>Momentum App</title>
 </head>
 <body>
-  <!-- 로그인 폼 -->
   <form class="hidden" id="login-form">
     <input required maxlength="15" type="text" placeholder="이름을 입력하세요." />
     <input type="submit" value="Log In" />
   </form>
 
-  <!-- 전체 콘텐츠를 감싸는 컨테이너 추가 -->
   <div class="main-content">
-    <!-- 명언 영역 -->
-    <div id="quote">
-      <span>"명언 내용이 여기에 표시됩니다."</span>
-      <span>– 작가</span>
-    </div>
 
-    <!-- 인사말 및 추가 정보 영역 (로그인 후 표시) -->
     <div id="greeting-box" class="hidden">
       <strong id="greeting-name"></strong>
       <span id="greeting-message"></span>
-      <div id="current-location">
-        현재 위치: <span id="location-name"></span>
-      </div>
-      <div id="weather-info">
-        날씨: <span id="weather-status"></span>
-      </div>
-      <button id="logout-btn">로그아웃</button>
     </div>
   </div>
 
-  <!-- 기타 영역들 (예: 시계, 할일 등) -->
   <h1 class="hidden" id="greeting"></h1>
   <div id="weather">
     <span></span>
@@ -50,8 +35,8 @@
     <h2 id="info-clock">00:00:00</h2>
     <p id="info-date">2025.03.28 (금)</p>
     <blockquote id="quote-box">
-      <p id="quote-text">"명언이 여기에 나옵니다."</p>
-      <footer id="quote-author">– 작가</footer>
+      <p id="quote-text"></p>
+      <footer id="quote-author"></footer>
     </blockquote>
   </div>
   <div class="todo-box">
@@ -60,8 +45,6 @@
     </form>
     <ul id="todo-list"></ul>
   </div>
-
-  <!-- 스크립트들 -->
   <script src="js/clock.js"></script>
   <script src="js/quotes.js"></script>
   <script src="js/background.js"></script>
@@ -69,7 +52,6 @@
   <script src="js/weather.js"></script>
   <script src="js/greetings.js"></script>
   <script>
-    // 로그아웃 버튼 이벤트
     const logoutBtn = document.getElementById("logout-btn");
     if (logoutBtn) {
       logoutBtn.addEventListener("click", () => {

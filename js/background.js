@@ -1,5 +1,6 @@
 const now = new Date();
 const hour = now.getHours();
+
 let imageName = "";
 let timeGreeting = "";
 let isNight = false;
@@ -13,17 +14,15 @@ if (hour >= 6 && hour < 12) {
 } else {
   imageName = "night.jpg";
   timeGreeting = "좋은 밤 되세요!";
-  isNight = true; // 밤임
+  isNight = true; 
 }
 
-// 배경 이미지에 fade-in 클래스 추가
 document.body.classList.add("fade-in");
 document.body.style.backgroundImage = `url("img/${imageName}")`;
 document.body.style.backgroundSize = "cover";
 document.body.style.backgroundRepeat = "no-repeat";
 document.body.style.backgroundPosition = "center center";
 
-// 밤이면 다크모드 적용
 if (isNight) {
   document.body.classList.add("dark-mode");
 }

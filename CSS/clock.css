@@ -1,25 +1,42 @@
-/* css/clock.css */
-
-#info-clock {
-  font-size: 3rem;
-  margin: 0;
-}
-
-#info-date {
-  font-size: 1.2rem;
-  margin: 10px 0 20px;
-}
-
 .info-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.4);
-  padding: 40px;
-  border-radius: 20px;
+  transform: translate(-50%, -60%);
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
   text-align: center;
   color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   z-index: 10;
-  width: 300px;
+}
+
+#info-clock {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+#info-date {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .info-box {
+    padding: 20px;
+    transform: translate(-50%, -50%);
+  }
+
+  #info-clock {
+    font-size: 2.2rem;
+  }
+
+  #info-date {
+    font-size: 1rem;
+  }
 }
